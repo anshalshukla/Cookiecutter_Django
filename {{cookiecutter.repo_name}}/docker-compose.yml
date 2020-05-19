@@ -15,28 +15,14 @@ services:
   web:
     container_name: {{cookiecutter.repo_name}}
     build: .
-    command: gunicorn {{cookiecutter.repo_name}}.wsgi:application --bind 0.0.0.0:8000 --workers=4
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
     env_file:
       - project.env
     ports:
       - 8000:8000
     depends_on:
       - db
-    volumes:
-      - staticfiles:/home/app/web/staticfiles
-
-  nginx:
-    container_name: nginx
-    image: nginx:mainline-alpine
-    restart: always
-    ports:
-      - 1337:80
-    volumes:
-      - ./nginx:/etc/nginx/conf.d
-      - staticfiles:/home/app/web/staticfiles
-    depends_on:
-      - web
-
 volumes:
   postgres-data:
-  staticfiles:

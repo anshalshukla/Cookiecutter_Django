@@ -1,25 +1,15 @@
-FROM python:3.6
+FROM python:3.8
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN apt-get update && apt-get install -y netcat
+WORKDIR /code
 
-RUN useradd --user-group --create-home --no-log-init --shell /bin/bash app
-
-ENV APP_HOME=/home/app/web
-
-RUN mkdir -p $APP_HOME/staticfiles
-
-WORKDIR $APP_HOME
-
-COPY requirements.txt $APP_HOME
-RUN pip install --upgrade pip
+COPY requirements.txt /code/
 RUN pip install -r requirements.txt
 
-COPY . $APP_HOME
-RUN chown -R app:app $APP_HOME
+COPY . /code/
 
-USER app:app
-
-ENTRYPOINT ["/home/app/web/entrypoint.sh"]
+RUN apt-get update && apt-get install -y netcat
+ 
+ENTRYPOINT ["/code/entrypoint.sh"]

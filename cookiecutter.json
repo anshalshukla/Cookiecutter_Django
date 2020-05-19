@@ -1,5 +1,6 @@
 {
 		"repo_name":"repo_name",
+		"app_name":"main",
 		"POSTGRES_USER":"",
 		"POSTGRES_PASSWORD":""
 }

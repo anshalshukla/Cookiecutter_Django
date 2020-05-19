@@ -2,5 +2,6 @@
 		"repo_name":"repo_name",
 		"app_name":"main",
 		"POSTGRES_USER":"",
-		"POSTGRES_PASSWORD":""
+		"POSTGRES_PASSWORD":"",
+		"DJANGO_SECRET_KEY":"djangosecretkey"
 }

@@ -9,4 +9,4 @@ class Database:
 
 
 class Secrets:
-    SECRET_KEY = "SuperSecretSecretKey"
+    SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')

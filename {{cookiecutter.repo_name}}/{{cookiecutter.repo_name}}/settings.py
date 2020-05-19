@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    '{{cookiecutter.app_name}}.apps.{{cookiecutter.app_name[0]|upper}}{{cookiecutter.app_name[1:]|lower}}Config'
 ]
 
 MIDDLEWARE = [

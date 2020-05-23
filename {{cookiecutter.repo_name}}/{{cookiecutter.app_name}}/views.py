@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse('A Boiler Plater template made with cookiecutter.')
+    return HttpResponse('A Boilerplate made with cookiecutter.')

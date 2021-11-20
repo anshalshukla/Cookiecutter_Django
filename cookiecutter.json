@@ -3,5 +3,6 @@
 		"app_name":"main",
 		"POSTGRES_USER":"postgres",
 		"POSTGRES_PASSWORD":"postgres",
+		"POSTGRES_DB":"project_db",
 		"DJANGO_SECRET_KEY":"djangosecretkey"
 }

@@ -29,7 +29,7 @@ Navigate to the folder where you want to start your Django Project and run the f
 
 * Running it against this repository.
 ```
-$ cookiecutter https://github.com/cry0egnic/Cookiecutter_Django.git
+$ cookiecutter https://github.com/cry0genic/Cookiecutter_Django.git
 ```
 
 * Running it using repository clone.
